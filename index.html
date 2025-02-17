@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>불의 3요소 퀴즈</title>
+    <title>산에서 길을 잃었을 때 퀴즈</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
         input, button { font-size: 16px; padding: 10px; margin-top: 10px; }
     </style>
     <script>
         function checkAnswer() {
-            const answer = document.getElementById("answer").value.trim();
-            const correctAnswer = "산소"; // 정답 설정
+            const userAnswer = document.getElementById("answer").value.trim();
+            const correctAnswer = "2"; // 정답 설정
             const result = document.getElementById("result");
             
-            if (answer === correctAnswer) {
-                result.innerHTML = "✅ 정답입니다! 🎉<br><br>다음 장소로 이동하세요! [분리수거장]";
+            if (userAnswer === correctAnswer) {
+                result.innerHTML = "✅ 정답입니다! 🎉<br><br>다음 장소로 이동하세요! [6번 카라반]";
                 result.style.color = "green";
             } else {
                 result.innerHTML = "❌ 다시 시도해 보세요!";
@@ -25,10 +25,17 @@
     </script>
 </head>
 <body>
-    <h1>불의 3요소 퀴즈</h1>
-    <p>불이 발생하고 유지되기 위해서는 OO, 열(발화원), 가연물(연료) 이 세 가지 요소가 반드시 필요합니다.<br>이를 불의 3요소라고 합니다.<br>OO에 들어갈 단어는 무엇일까요?</p>
-    <input type="text" id="answer" placeholder="정답 입력">
+    <h1>산에서 길을 잃었을 때 퀴즈</h1>
+    <p>산에서 길을 잃었을 때 적절한 대처 방법은?</p>
+    
+    <p>1. 무작정 걸어간다</p>
+    <p>2. 큰 소리로 도움을 요청하고, 눈에 띄는 곳에서 기다린다</p>
+    <p>3. 혼자 힘으로 나가려고 노력한다</p>
+    <p>4. 자연인의 삶을 시작한다</p>
+    
+    <input type="text" id="answer" placeholder="정답 번호 입력">
     <button onclick="checkAnswer()">제출</button>
+    
     <p id="result"></p>
 </body>
 </html>
